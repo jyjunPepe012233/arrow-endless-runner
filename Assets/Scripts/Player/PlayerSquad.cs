@@ -20,9 +20,19 @@ public class PlayerSquad : MonoBehaviour
 		for (int i = 0; i < count; i++)
 		{
 			PlayerUnit unit = Instantiate(unitPrefab, transform);
+			unit.Initialize(this);
 			_units.Add(unit);
 			unit.transform.localPosition = CalculateUnitLocalPosition(i);	
-		} 
+		}
+	}
+
+	private void RepositionUnits()
+	{
+		for (int i = 0; i < _units.Count; i++)
+		{ 
+			PlayerUnit unit = _units[i];
+			unit.transform.localPosition = CalculateUnitLocalPosition(i);
+		}
 	}
 
 	private Vector3 CalculateUnitLocalPosition(int index)
@@ -43,5 +53,13 @@ public class PlayerSquad : MonoBehaviour
 			y++;
 		}
 		return new Vector3(x, 0, -y) * unitSpacing;
+	}
+	
+	public void UnitDied(PlayerUnit unit)
+	{
+		_units.Remove(unit);
+		Destroy(unit.gameObject);
+		
+		RepositionUnits();
 	}
 }

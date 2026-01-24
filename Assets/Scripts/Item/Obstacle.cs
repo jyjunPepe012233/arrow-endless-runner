@@ -1,7 +1,8 @@
 using TMPro;
 using UnityEngine;
 
-public class Obstacle : Item, IDamageableItem
+[RequireComponent(typeof(Collider))]
+public class Obstacle : Item
 {
 	public int initialMinHealth = 5;
 	public int initialMaxHealth = 15;
@@ -24,6 +25,17 @@ public class Obstacle : Item, IDamageableItem
 	private void UpdateHealthText()
 	{
 		healthText.text = _currentHealth.ToString();
+	}
+
+	public void OnTriggerEnter(Collider collider)
+	{
+		PlayerUnit playerUnit = collider.GetComponent<PlayerUnit>();
+		if (playerUnit != null)
+		{
+			int temp = playerUnit.characterHealth; 
+			playerUnit.TakeDamage(_currentHealth);
+			TakeDamage(temp);
+		}
 	}
 
 	public void TakeDamage(int damage)

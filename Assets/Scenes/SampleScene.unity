@@ -416,7 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   unitPrefab: {fileID: 5110423487046725123, guid: 7b16e7160683e44a98a86508d2a9522e, type: 3}
-  initialUnitCount: 1
+  initialUnitCount: 10
   unitSpacing: 0.7
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
