@@ -72,8 +72,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9328640974d847f1a6e60f22ed2b842b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialMinHealth: 10
-  initialMaxHealth: 50
+  initialMinHealth: 5
+  initialMaxHealth: 15
   healthText: {fileID: 6716782094803450843}
 --- !u!1 &7335352079228325451
 GameObject:

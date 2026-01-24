@@ -132,7 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 1
   speed: 10
-  flyDistance: 15
+  flyDistance: 22
 --- !u!135 &3501079992540911222
 SphereCollider:
   m_ObjectHideFlags: 0

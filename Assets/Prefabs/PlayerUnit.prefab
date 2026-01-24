@@ -524,7 +524,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 182ab4838b794bc885721d45af78bcb0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shootInterval: 0.3
+  shootInterval: 0.5
   projectilePrefab: {fileID: 1938013262154902711, guid: 055195379f4c74ffbb55f8a261730b4f, type: 3}
 --- !u!1 &590281105553915673
 GameObject:

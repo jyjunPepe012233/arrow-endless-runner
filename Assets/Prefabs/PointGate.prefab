@@ -72,8 +72,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dc0f8af322ff4041bdd75ce700c1dacc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  initialMinPoint: -50
-  initialMaxPoint: -10
+  initialMinPoint: -15
+  initialMaxPoint: -5
   pointText: {fileID: 6716782094803450843}
 --- !u!1 &7335352079228325451
 GameObject:
