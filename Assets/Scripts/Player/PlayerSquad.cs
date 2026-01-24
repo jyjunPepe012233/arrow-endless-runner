@@ -9,6 +9,11 @@ public class PlayerSquad : MonoBehaviour
 	public float unitSpacing = 0.7f;
 
 	private List<PlayerUnit> _units;
+
+	public int unitCount
+	{
+		get => _units.Count;
+	}
 	
 	private void Start()
 	{

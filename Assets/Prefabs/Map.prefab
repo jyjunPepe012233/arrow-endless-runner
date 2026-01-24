@@ -414,7 +414,8 @@ GameObject:
   m_Component:
   - component: {fileID: 7080507678319062222}
   - component: {fileID: 5891217336666785297}
-  m_Layer: 0
+  - component: {fileID: 1509174529359074544}
+  m_Layer: 3
   m_Name: Map
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -497,6 +498,27 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!65 &1509174529359074544
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5252693198751897344}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 20, y: 1, z: 40}
+  m_Center: {x: 0, y: -0.5, z: 0}
 --- !u!1 &5500162032487609511
 GameObject:
   m_ObjectHideFlags: 0
