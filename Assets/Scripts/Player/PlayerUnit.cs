@@ -21,4 +21,9 @@ public class PlayerUnit : MonoBehaviour
 			_playerSquad.UnitDied(this);
 		}
 	}
+
+	public void GetPoint(int point)
+	{
+		_playerSquad.AddPoint(point);
+	}
 }

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 9042503204632800914}
   - component: {fileID: 8735911262467826928}
   m_Layer: 0
-  m_Name: ItemSpawner1
+  m_Name: ItemSpawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,3 +47,4 @@ MonoBehaviour:
   spawnProbability: 0.5
   itemPrefabs:
   - {fileID: 3408086991603648863, guid: fd8795bd7202c42369fe087b6bb29af9, type: 3}
+  - {fileID: 2202531137825579302, guid: 19b03dcca75b04172b13e0b7250fc9d8, type: 3}

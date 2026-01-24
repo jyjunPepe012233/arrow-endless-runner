@@ -5,6 +5,7 @@ public class PlayerSquad : MonoBehaviour
 {
 	public PlayerUnit unitPrefab;
 	public int initialUnitCount = 1;
+	public int maxUnitCount = 50;
 	public float unitSpacing = 0.7f;
 
 	private List<PlayerUnit> _units;
@@ -17,6 +18,11 @@ public class PlayerSquad : MonoBehaviour
 
 	private void AddUnits(int count)
 	{
+		if (_units.Count + count > maxUnitCount)
+		{
+			count = maxUnitCount - _units.Count;
+		}
+		
 		for (int i = 0; i < count; i++)
 		{
 			PlayerUnit unit = Instantiate(unitPrefab, transform);
@@ -61,5 +67,10 @@ public class PlayerSquad : MonoBehaviour
 		Destroy(unit.gameObject);
 		
 		RepositionUnits();
+	}
+
+	public void AddPoint(int point)
+	{
+		AddUnits(point);
 	}
 }

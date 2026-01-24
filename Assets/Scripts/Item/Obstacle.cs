@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
-public class Obstacle : Item
+public class Obstacle : Item, IDamageableItem
 {
 	public int initialMinHealth = 5;
 	public int initialMaxHealth = 15;
