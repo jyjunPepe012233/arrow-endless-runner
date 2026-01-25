@@ -39,23 +39,19 @@ public class PointGate : Item, IDamageableItem
 		}
 	}
 
-	public void OnTriggerEnter(Collider collider)
+	protected override void OnHitPlayerUnit(PlayerUnit playerUnit)
 	{
-		PlayerUnit playerUnit = collider.GetComponent<PlayerUnit>();
-		if (playerUnit != null)
+		if (_currentPoint > 0)
 		{
-			if (_currentPoint > 0)
-			{
-				playerUnit.GetPoint(_currentPoint);
-			}
-
-			if (_currentPoint < 0)
-			{
-				playerUnit.TakeDamage(-_currentPoint);
-			}
-			
-			Destroy(gameObject);
+			playerUnit.GetPoint(_currentPoint);
 		}
+
+		if (_currentPoint < 0)
+		{
+			playerUnit.TakeDamage(-_currentPoint);
+		}
+			
+		Destroy(gameObject);
 	}
 
 	public void TakeDamage(int damage)

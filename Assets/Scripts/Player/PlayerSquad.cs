@@ -33,8 +33,9 @@ public class PlayerSquad : MonoBehaviour
 			PlayerUnit unit = Instantiate(unitPrefab, transform);
 			unit.Initialize(this);
 			_units.Add(unit);
-			unit.transform.localPosition = CalculateUnitLocalPosition(i);	
 		}
+		
+		RepositionUnits();
 	}
 
 	private void RepositionUnits()

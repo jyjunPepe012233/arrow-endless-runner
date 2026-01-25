@@ -75,6 +75,7 @@ MonoBehaviour:
   initialMinHealth: 5
   initialMaxHealth: 15
   healthText: {fileID: 6716782094803450843}
+  coinPrefab: {fileID: 7674749499300380070, guid: 7df6f182583934d96b22007cfb819387, type: 3}
 --- !u!1 &7335352079228325451
 GameObject:
   m_ObjectHideFlags: 0
