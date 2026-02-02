@@ -29,16 +29,19 @@ public class DamageProjectile : MonoBehaviour
 	
 	public void OnTriggerEnter(Collider collider)
 	{
-		IDamageableItem obstacle = collider.GetComponent<IDamageableItem>();
+		Obstacle obstacle = collider.GetComponent<Obstacle>();
 		if (obstacle != null)
 		{
-			Collide(obstacle);
+			obstacle.TakeDamage(damage);
+			Destroy(gameObject);
+			return;
 		}
-	}
 
-	private void Collide(IDamageableItem obstacle)
-	{
-		obstacle.TakeDamage(damage);
-		Destroy(gameObject);
+		PointGate pointGate = collider.GetComponent<PointGate>();
+		if (pointGate != null)
+		{
+			pointGate.TakeDamage(damage);
+			Destroy(gameObject);
+		}
 	}
 }

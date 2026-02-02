@@ -2,7 +2,7 @@ using TMPro;
 using UnityEngine;
 
 [RequireComponent(typeof(Collider))]
-public class PointGate : Item, IDamageableItem
+public class PointGate : Item
 {
 	public int initialMinPoint = -15;
 	public int initialMaxPoint = -5;
